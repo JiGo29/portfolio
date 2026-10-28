@@ -28,7 +28,7 @@ const PROJETS = [
 		
 		resultats: "Réalisation d’un système interactif permettant de charger et d’afficher l’inventaire, de consommer des ressources, de trier les stocks par quantité et de conserver un historique des opérations. Le journal de bord enregistre notamment les chargements, les consommations, les tris, les choix invalides et la fermeture du programme.",
 		
-		code: "#"
+		code: "https://github.com/JiGo29/station-cpp"
 	},
 {
 	cat: "Gestion vétérinaire",
@@ -47,7 +47,7 @@ const PROJETS = [
 	
 	resultats: "Réalisation d’un prototype fonctionnel permettant d’enregistrer les animaux, d’afficher leurs fiches, de gérer les consultations, de calculer les revenus totaux et moyens, puis de générer un rapport texte regroupant les animaux, les consultations et le bilan financier.",
 	
-	code: "#"
+	code: "https://github.com/JiGo29/clinique-cpp"
 },
 
 {
