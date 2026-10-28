@@ -112,21 +112,79 @@ const PROJETS = [
 
 // [nom, 1 = Intermédiaire / 0 = Notions]
 const COMPETENCES = {
-	"Langages":[["C++",1],["Python",1],["HTML / CSS",1],["JavaScript",0]],
-	"Frameworks":[["Qt",1],["SFML",0],["Flet",0],["Pytest",0]],
-	"Outils":[["Git / GitHub",1],["VS Code",1],["CMake",0],["Figma",0]],
-	"Systèmes":[["Windows",1],["Linux",1],["Bash",0],["Docker",0]]
+	"Langages":[["C++",1],["Python",0],["HTML / CSS",0],["JavaScript",0]],
+	"Frameworks":[["Qt",0],["SFML",0],["Flet",0],["Pytest",0]],
+	"Outils":[["VS Code",1],["Git / GitHub",0],["CMake",0],["Figma",0]],
+	"Systèmes":[["Windows",1],["Linux",0],["Bash",0],["Docker",0]]
 };
 
-const VEILLE = [
+/*const VEILLE = [
 	["C++ moderne","J’explore les concepts, ranges et smart pointers pour écrire du code plus sûr et expressif.","cppreference.com","https://cppreference.com"],
 ["Linux au quotidien","Je documente mon passage progressif à Linux et les outils qui améliorent mon flux de travail.","linuxjourney.com","https://linuxjourney.com"],
 ["Web accessible","Je teste les bonnes pratiques ARIA et la navigation clavier sur chacun de mes prototypes.","web.dev/accessibility","https://web.dev/accessibility"]
+];*/
+
+
+const VEILLE = [
+    [
+        "C++ moderne",
+        "J’explore les concepts, ranges et smart pointers pour écrire du code plus sûr et expressif.",
+        "cppreference.com",
+        "https://cppreference.com"
+    ],
+    [
+        "Linux au quotidien",
+        "Je documente mon passage progressif à Linux et les outils qui améliorent mon flux de travail.",
+        "linuxjourney.com",
+        "https://linuxjourney.com"
+    ],
+    [
+        "Développement web",
+        "J’essaie d’apprendre les bases du développement web en découvrant HTML pour structurer les pages, CSS pour les mettre en forme et JavaScript pour ajouter de l’interactivité.",
+        "MDN Web Docs",
+        "https://developer.mozilla.org/fr/docs/Learn_web_development"
+    ],
+    [
+        "Découverte de Python",
+        "Je souhaite découvrir Python, comprendre sa syntaxe et apprendre progressivement les bases de la programmation à travers des exercices et de petits projets.",
+        "Python — Guide pour débutants",
+        "https://wiki.python.org/python/getting-started/"
+    ]
 ];
 
-const PARCOURS = [
+
+/*const PARCOURS = [
 	["2024 — 2028","Baccalauréat en informatique appliquée","Université de Moncton","Algorithmique, programmation orientée objet, bases de données et génie logiciel."],
 ["Été 2026","Assistant au soutien informatique","Organisation fictive — à remplacer","Diagnostic de postes, documentation et accompagnement des utilisateurs.","« Jonathan apprend vite et communique avec beaucoup de clarté. » — Citation fictive"],
 ["2025","Certification Git & GitHub","Plateforme fictive — à remplacer","Branches, revues de code, résolution de conflits et intégration continue."],
 ["2023 — 2024","Diplôme d’études secondaires","Établissement à remplacer",""]
+];*/
+
+
+const PARCOURS = [
+    [
+        "Août 2025 — Aujourd’hui",
+        "Baccalauréat en informatique appliquée",
+        "Université de Moncton",
+        "Formation en informatique axée sur l’algorithmique, la programmation, les bases de données et le développement logiciel."
+    ],
+    [
+        "Novembre 2024 — Juin 2025",
+        "Bachelor of Engineering, Computer Software Engineering",
+        "Institut Supérieur d’Informatique, Programmation et Analyse",
+        "Études en génie logiciel et découverte des concepts fondamentaux du développement informatique."
+    ],
+    [
+        "Février 2023 — Mars 2024",
+        "Études en sciences biomédicales",
+        "Université Catholique de Bukavu",
+        "Études en médecine avec une initiation aux sciences biomédicales."
+    ],
+    [
+        "Septembre 2016 — Juillet 2022",
+        "Diplôme d’études secondaires — Mathématiques, Physique, Biologie et Chimie",
+        "Collège Alfajiri",
+        "Formation scientifique avec un accent sur les mathématiques et les sciences naturelles."
+    ]
 ];
+
