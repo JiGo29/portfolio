@@ -1,5 +1,5 @@
 // ✏️ Tout le contenu à personnaliser se trouve ici.
-const EMAIL = "jonathanbalezi@gmail.com";
+const EMAIL = "jonathanbalezi05@gmail.com";
 
 const PROJETS = [
 	/*{ cat:"Application desktop", nom:"Station Arctique", url:"station-arctique.app", val:"-18.4°", label:"// Station Arctique",
