@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV — Jonathan [Nom]</title>
+<style>
+  *{box-sizing:border-box;margin:0}
+  html,body{height:100%}
+  body{
+    background:#000;
+    color:#f1f4f2;
+    font:400 1.1rem/1.8 "Hanken Grotesk",system-ui,sans-serif;
+    display:grid;
+    place-items:center;
+    text-align:center;
+    padding:2rem;
+  }
+  p{max-width:34ch}
+  a{
+    display:inline-block;
+    margin-top:2rem;
+    color:#5ef2b0;
+    font:.85rem "JetBrains Mono",ui-monospace,Consolas,monospace;
+    text-decoration:none;
+    border-bottom:1px solid #5ef2b0;
+  }
+</style>
+</head>
+<body>
+  <div>
+    <p>Mon CV n'est pas encore disponible en ligne.<br>
+        Il sera publié très prochainement.<br>
+        Merci de votre compréhension et de votre patience.<br>
+        N'hésitez pas à me contacter pour toute demande.</p>
+        <a href="index.html">← Retour au site</a>
+  </div>
+</body>
+</html>
