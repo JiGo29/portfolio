@@ -16,7 +16,7 @@
     text-align:center;
     padding:2rem;
   }
-  p{max-width:44ch}
+  p{white-space:nowrap}
   a{
     display:inline-block;
     margin-top:2rem;
@@ -25,16 +25,25 @@
     text-decoration:none;
     border-bottom:1px solid #5ef2b0;
   }
+  @media(max-width:600px){
+    body{font-size:.85rem;padding:1rem}
+  }
 </style>
 </head>
 <body>
   <div>
-     <p>Mon CV n'est pas encore disponible en ligne.<br>
-Il sera publié très prochainement.<br>
-Merci de votre compréhension et de votre patience.<br>
-N'hésitez pas à me contacter pour toute demande.</p>
+    <p>Mon CV n'est pas encore disponible en ligne.</p>
+    <p>Il sera publié très prochainement.</p>
+    <p>Merci de votre compréhension et de votre patience.</p>
+    <p>N'hésitez pas à me contacter pour toute demande.</p>
     <a href="index.html" onclick="window.close();return false;">← Retour au site</a>
-   <!--<a href="index.html" onclick="history.back();return false;">← Retour au site</a>-->
   </div>
+  <script>
+    document.getElementById('retour').addEventListener('click', function (e) {
+      e.preventDefault();
+      window.close();
+      setTimeout(function () { location.href = 'index.html'; }, 150);
+    });
+  </script>
 </body>
 </html>
