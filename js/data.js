@@ -58,7 +58,7 @@ const PROJETS = [
 		
 		resultats: "Un convertisseur interactif qui produit la bonne notation postfixe, par exemple a+b*c devient a b c * + et ((a+b)*(c-d))/e devient a b + c d - * e /. Le programme a été testé sur des expressions avec parenthèses imbriquées et opérateurs de même priorité. Il reste à améliorer le support des espaces et des nombres à plusieurs chiffres.",
 		
-		code: "https://github.com/JiGo29/rpn-cpp"
+		code: "https://github.com/JiGo29/RPN-cpp"
 	},
 
 {
