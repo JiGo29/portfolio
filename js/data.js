@@ -41,56 +41,44 @@ const PROJETS = [
 	code: "https://github.com/JiGo29/clinique-cpp"
 },
 
-{
-	cat: "Algorithmique",
-	nom: "Convertisseur RPN",
-	url: "convertisseur-rpn.app",
-	val: "LIFO",
-	label: "// Convertisseur RPN",
-	
-	desc: "Programme en C++ qui utilise une pile dynamique pour traiter une expression arithmétique composée de chiffres, de lettres, d'opérateurs et de parenthèses. Il affiche les éléments dans l'ordre postfixé et enregistre certaines valeurs dans un fichier texte.",
-	
-	tech: [
-		"C++",
-		"Structures de données",
-		"Piles dynamiques",
-		"Pointeurs",
-		"Gestion des fichiers"
-	],
-	
-	demarche: "Conception d'une pile à l'aide de structures chaînées et de pointeurs. Chaque nœud contient un caractère et un pointeur vers le nœud suivant. Les fonctions empiler et dépiler permettent de gérer le sommet de la pile. Le programme parcourt l'expression saisie caractère par caractère afin de traiter les opérandes, les opérateurs et les parenthèses.",
-	
-	defis: "La gestion du sommet de la pile, des parenthèses et de l'ordre de traitement des opérateurs demande une attention particulière. Le projet met en pratique l'allocation dynamique avec new et delete, la gestion de la taille de la pile et la manipulation de fichiers pour conserver des valeurs dans valeurs.in.",
-	
-	resultats: "Réalisation d'un programme interactif en C++ mettant en pratique les piles dynamiques, le parcours de chaînes de caractères et la manipulation de fichiers. Le programme affiche les opérandes et les opérateurs dépilés dans le terminal et conserve certaines valeurs dans un fichier texte.",
-	
-	code: "#"
-},
+	{
+		cat: "Algorithmes",
+		nom: "Convertisseur RPN",
+		url: "convertisseur-rpn.app",
+		val: "a b c * +",
+		label: "// Convertisseur RPN",
+		
+		desc: "Programme en C++ qui convertit une expression mathématique en notation infixe (a+b*c) en notation polonaise inversée (a b c * +). Il gère les cinq opérateurs + - * / ^, les parenthèses imbriquées et les priorités entre opérateurs, grâce à une pile codée à la main.",
+		
+		tech: ["C++", "Pile (liste chaînée)", "Shunting-yard", "Pointeurs", "Fichiers texte"],
+		
+		demarche: "Implémentation de l’algorithme Shunting-yard de Dijkstra. L’expression est lue caractère par caractère : les opérandes sont affichés directement, les opérateurs et les parenthèses ouvrantes passent par une pile construite avec des noeuds chaînés (empiler, depiler) et de l’allocation dynamique. Une fonction de priorité décide quand dépiler les opérateurs, et chaque caractère traité est consigné dans le fichier valeurs.in.",
+		
+		defis: "Le principal défi était de bien gérer les priorités et l’associativité : les opérateurs + - * / s’évaluent de gauche à droite, alors que ^ s’évalue de droite à gauche (a^b^c devient a b c ^ ^). Il fallait aussi retirer correctement la parenthèse ouvrante de la pile à chaque parenthèse fermante, et placer l’empilement de l’opérateur courant après la boucle de dépilage pour éviter les boucles infinies.",
+		
+		resultats: "Un convertisseur interactif qui produit la bonne notation postfixe, par exemple a+b*c devient a b c * + et ((a+b)*(c-d))/e devient a b + c d - * e /. Le programme a été testé sur des expressions avec parenthèses imbriquées et opérateurs de même priorité. Il reste à améliorer le support des espaces et des nombres à plusieurs chiffres.",
+		
+		code: "https://github.com/JiGo29/rpn-cpp"
+	},
 
 {
 	cat: "Structures de données",
-	nom: "Détecteur de palindromes",
-	url: "detecteur-palindromes.app",
-	val: "LIFO / FIFO",
-	label: "// Détecteur de palindromes",
-	
-	desc: "Programme en C++ qui détermine si un mot ou une phrase est un palindrome en utilisant simultanément une pile et une file. Il ignore les caractères non alphabétiques, normalise les lettres en minuscules et compare les caractères dans l'ordre inverse et dans l'ordre initial.",
-	
-	tech: [
-		"C++",
-		"Piles",
-		"Files",
-		"Chaînes de caractères",
-		"Passage par référence"
-	],
-	
-	demarche: "Le programme parcourt la phrase saisie et ajoute chaque lettre alphabétique en minuscules dans une pile et dans une file. La pile restitue les caractères selon le principe LIFO (dernier entré, premier sorti), tandis que la file utilise le principe FIFO (premier entré, premier sorti). La comparaison des caractères permet de vérifier si la phrase se lit de la même manière dans les deux sens.",
-	
-	defis: "Le principal défi consiste à comparer correctement les caractères dans les deux structures de données tout en ignorant les espaces, la ponctuation et les autres caractères non alphabétiques. Le passage des structures par référence évite de réaliser des copies inutiles. Après chaque vérification, la pile et la file sont vidées pour permettre le traitement d'une nouvelle phrase.",
-	
-	resultats: "Réalisation d'un vérificateur interactif de palindromes qui accepte des mots et des phrases. Le programme affiche si le texte est un palindrome après normalisation des lettres et comparaison des éléments de la pile et de la file.",
-	
-	code: "#"
+		nom: "Vérificateur de palindromes",
+		url: "verificateur-palindromes.app",
+		val: "radar",
+		label: "// Palindromes",
+		
+		desc: "Programme en C++ qui détermine si un mot ou une phrase est un palindrome (radar, Engage le jeu que je le gagne). Il repose sur une pile et une file génériques, codées à la main avec des noeuds chaînés, sans utiliser les structures de la bibliothèque standard.",
+		
+		tech: ["C++", "Templates", "Pile", "File", "Listes chaînées"],
+		
+		demarche: "Chaque lettre de la phrase est placée à la fois dans une pile et dans une file. Comme la pile restitue les lettres de la fin vers le début et la file du début vers la fin, il suffit de retirer les éléments un à un et de comparer chaque paire : une différence signifie que ce n’est pas un palindrome. Les espaces, la ponctuation et les chiffres sont ignorés, et les lettres sont converties en minuscules avant la comparaison.",
+		
+		defis: "Concevoir une pile Pile<A>, une file File<A> et un noeud Noeud<A> génériques avec des templates, puis gérer soi-même la mémoire : allocation à chaque ajout, libération à chaque retrait et dans les destructeurs. Il fallait aussi vérifier que les tailles et les éléments correspondent à chaque étape de la comparaison.",
+		
+		resultats: "Un programme qui reconnaît correctement des mots et des phrases complètes, en ignorant la casse et la ponctuation (A man, a plan, a canal: Panama est reconnu comme un palindrome). Les limites identifiées sont la gestion des lettres accentuées et l’ajout en fin de file, dont le coût pourrait être réduit avec un pointeur vers le dernier noeud.",
+		
+		code: "https://github.com/JiGo29/palindrome-cpp"
 },
 ];
 
